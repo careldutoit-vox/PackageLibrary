@@ -40,11 +40,11 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="T2.SendingMessage.Library">
-      <HintPath>..\..\..\N-Libaries\dll-library\T2Dependencies\T2.SendingMessage.Library.dll</HintPath>
+      <HintPath>..\Dependencies\T2.SendingMessage.Library.dll</HintPath>
     </Reference>
     <Reference Include="T2.SendingMessage.Library.Moles, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="T2.Vox.RouteKey.Plugins.Interface">
-      <HintPath>..\..\..\N-Libaries\dll-library\T2Dependencies\T2.Vox.RouteKey.Plugins.Interface.dll</HintPath>
+      <HintPath>..\Dependencies\T2.Vox.RouteKey.Plugins.Interface.dll</HintPath>
     </Reference>
     <Reference Include="Vox.Auditing.Moles, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Vox.Auditing.Repository.SQLServer.Moles, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />

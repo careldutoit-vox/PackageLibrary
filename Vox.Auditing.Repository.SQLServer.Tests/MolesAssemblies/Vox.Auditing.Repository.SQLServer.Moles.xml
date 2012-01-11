@@ -1,0 +1,1425 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Vox.Auditing.Repository.SQLServer.Moles</name>
+    </assembly>
+    <members>
+        <member name="T:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch">
+            <summary>Mole type of <see cref="T:Vox.Auditing.Repository.SQLServer.DataModel.Batch"/>
+            .</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.#ctor(Vox.Auditing.Repository.SQLServer.DataModel.Batch)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.Bind(System.ComponentModel.INotifyPropertyChanged)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.Bind(System.ComponentModel.INotifyPropertyChanging)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.Bind(System.Data.Objects.DataClasses.IEntityWithChangeTracker)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.Bind(System.Data.Objects.DataClasses.IEntityWithKey)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.Bind(System.Data.Objects.DataClasses.IEntityWithRelationships)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.BatchIDGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.BatchID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.BatchIDSetInt32">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.BatchID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.BatchNumberGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.BatchNumber"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.BatchNumberSetString">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.BatchNumber"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.Constructor">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.DataModel.Batch.#ctor"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.FinishDateGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.FinishDate"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.FinishDateSetNullableOfDateTime">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.FinishDate"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.MessageClientGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.MessageClient"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.MessageClientIDGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.MessageClientID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.MessageClientIDSetInt32">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.MessageClientID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.MessageClientReferenceGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.MessageClientReference"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.MessageClientReferenceSetEntityReferenceOfMessageClient">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.MessageClientReference"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.MessageClientSetMessageClient">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.MessageClient"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.MessagesGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.Messages"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.MessagesSetEntityCollectionOfMessage">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.Messages"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.StartDateGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.StartDate"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.StartDateSetDateTime">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.StartDate"/>
+            </summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.AllInstances.BatchIDGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.BatchID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.AllInstances.BatchIDSetInt32">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.BatchID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.AllInstances.BatchNumberGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.BatchNumber"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.AllInstances.BatchNumberSetString">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.BatchNumber"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.AllInstances.FinishDateGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.FinishDate"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.AllInstances.FinishDateSetNullableOfDateTime">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.FinishDate"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.AllInstances.MessageClientGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.MessageClient"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.AllInstances.MessageClientIDGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.MessageClientID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.AllInstances.MessageClientIDSetInt32">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.MessageClientID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.AllInstances.MessageClientReferenceGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.MessageClientReference"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.AllInstances.MessageClientReferenceSetEntityReferenceOfMessageClient">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.MessageClientReference"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.AllInstances.MessageClientSetMessageClient">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.MessageClient"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.AllInstances.MessagesGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.Messages"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.AllInstances.MessagesSetEntityCollectionOfMessage">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.Messages"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.AllInstances.StartDateGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.StartDate"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MBatch.AllInstances.StartDateSetDateTime">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Batch.StartDate"/>
+            </summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.Moles.MBatchRepositoryDataModel">
+            <summary>Mole type of <see cref="T:Vox.Auditing.Repository.SQLServer.BatchRepositoryDataModel"/>
+            .</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.Moles.MBatchRepositoryDataModel.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.Moles.MBatchRepositoryDataModel.#ctor(Vox.Auditing.Repository.SQLServer.BatchRepositoryDataModel)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.Moles.MBatchRepositoryDataModel.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.Moles.MBatchRepositoryDataModel.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.Moles.MBatchRepositoryDataModel.Bind(Vox.Auditing.Repository.IBatchRepository)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.Moles.MBatchRepositoryDataModel.Bind(Vox.Auditing.Repository.IRepository{Vox.Auditing.Model.Batch})">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MBatchRepositoryDataModel.AddBatch">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.BatchRepositoryDataModel.Add(Vox.Auditing.Model.Batch)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MBatchRepositoryDataModel.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MBatchRepositoryDataModel.ConstructorString">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.BatchRepositoryDataModel.#ctor(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MBatchRepositoryDataModel.GetByIDInt32">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.BatchRepositoryDataModel.GetByID(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MBatchRepositoryDataModel.GetByNameString">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.BatchRepositoryDataModel.GetByName(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MBatchRepositoryDataModel.RemoveBatch">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.BatchRepositoryDataModel.Remove(Vox.Auditing.Model.Batch)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MBatchRepositoryDataModel.UpdateBatch">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.BatchRepositoryDataModel.Update(Vox.Auditing.Model.Batch)"/>
+            </summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.Moles.MBatchRepositoryDataModel.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MBatchRepositoryDataModel.AllInstances.AddBatch">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.BatchRepositoryDataModel.Add(Vox.Auditing.Model.Batch)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MBatchRepositoryDataModel.AllInstances.GetByIDInt32">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.BatchRepositoryDataModel.GetByID(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MBatchRepositoryDataModel.AllInstances.GetByNameString">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.BatchRepositoryDataModel.GetByName(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MBatchRepositoryDataModel.AllInstances.RemoveBatch">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.BatchRepositoryDataModel.Remove(Vox.Auditing.Model.Batch)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MBatchRepositoryDataModel.AllInstances.UpdateBatch">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.BatchRepositoryDataModel.Update(Vox.Auditing.Model.Batch)"/>
+            </summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.Moles.MClientRepositoryDataModel">
+            <summary>Mole type of <see cref="T:Vox.Auditing.Repository.SQLServer.ClientRepositoryDataModel"/>
+            .</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.Moles.MClientRepositoryDataModel.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.Moles.MClientRepositoryDataModel.#ctor(Vox.Auditing.Repository.SQLServer.ClientRepositoryDataModel)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.Moles.MClientRepositoryDataModel.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.Moles.MClientRepositoryDataModel.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.Moles.MClientRepositoryDataModel.Bind(Vox.Auditing.Repository.IClientRepository)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.Moles.MClientRepositoryDataModel.Bind(Vox.Auditing.Repository.IRepository{Vox.Auditing.Model.Client})">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MClientRepositoryDataModel.AddClient">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.ClientRepositoryDataModel.Add(Vox.Auditing.Model.Client)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MClientRepositoryDataModel.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MClientRepositoryDataModel.ConstructorString">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.ClientRepositoryDataModel.#ctor(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MClientRepositoryDataModel.GetByIDInt32">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.ClientRepositoryDataModel.GetByID(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MClientRepositoryDataModel.GetByNameString">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.ClientRepositoryDataModel.GetByName(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MClientRepositoryDataModel.RemoveClient">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.ClientRepositoryDataModel.Remove(Vox.Auditing.Model.Client)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MClientRepositoryDataModel.UpdateClient">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.ClientRepositoryDataModel.Update(Vox.Auditing.Model.Client)"/>
+            </summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.Moles.MClientRepositoryDataModel.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MClientRepositoryDataModel.AllInstances.AddClient">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.ClientRepositoryDataModel.Add(Vox.Auditing.Model.Client)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MClientRepositoryDataModel.AllInstances.GetByIDInt32">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.ClientRepositoryDataModel.GetByID(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MClientRepositoryDataModel.AllInstances.GetByNameString">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.ClientRepositoryDataModel.GetByName(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MClientRepositoryDataModel.AllInstances.RemoveClient">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.ClientRepositoryDataModel.Remove(Vox.Auditing.Model.Client)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MClientRepositoryDataModel.AllInstances.UpdateClient">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.ClientRepositoryDataModel.Update(Vox.Auditing.Model.Client)"/>
+            </summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage">
+            <summary>Mole type of <see cref="T:Vox.Auditing.Repository.SQLServer.DataModel.Message"/>
+            .</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.#ctor(Vox.Auditing.Repository.SQLServer.DataModel.Message)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.Bind(System.ComponentModel.INotifyPropertyChanged)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.Bind(System.ComponentModel.INotifyPropertyChanging)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.Bind(System.Data.Objects.DataClasses.IEntityWithChangeTracker)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.Bind(System.Data.Objects.DataClasses.IEntityWithKey)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.Bind(System.Data.Objects.DataClasses.IEntityWithRelationships)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.BatchGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.Batch"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.BatchIDGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.BatchID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.BatchIDSetInt32">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.BatchID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.BatchReferenceGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.BatchReference"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.BatchReferenceSetEntityReferenceOfBatch">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.BatchReference"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.BatchSetBatch">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.Batch"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.Constructor">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.DataModel.Message.#ctor"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.MessageApplicationGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageApplication"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.MessageApplicationIDGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageApplicationID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.MessageApplicationIDSetInt32">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageApplicationID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.MessageApplicationReferenceGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageApplicationReference"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.MessageApplicationReferenceSetEntityReferenceOfMessageApplication">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageApplicationReference"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.MessageApplicationSetMessageApplication">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageApplication"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.MessageAuditsGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageAudits"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.MessageAuditsSetEntityCollectionOfMessageAudit">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageAudits"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.MessageClientGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageClient"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.MessageClientIDGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageClientID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.MessageClientIDSetInt32">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageClientID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.MessageClientReferenceGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageClientReference"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.MessageClientReferenceSetEntityReferenceOfMessageClient">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageClientReference"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.MessageClientSetMessageClient">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageClient"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.MessageDateTimeGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageDateTime"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.MessageDateTimeSetDateTime">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageDateTime"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.MessageIDGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.MessageIDSetInt32">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.MessageNumberGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageNumber"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.MessageNumberSetString">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageNumber"/>
+            </summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.BatchGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.Batch"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.BatchIDGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.BatchID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.BatchIDSetInt32">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.BatchID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.BatchReferenceGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.BatchReference"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.BatchReferenceSetEntityReferenceOfBatch">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.BatchReference"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.BatchSetBatch">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.Batch"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.MessageApplicationGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageApplication"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.MessageApplicationIDGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageApplicationID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.MessageApplicationIDSetInt32">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageApplicationID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.MessageApplicationReferenceGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageApplicationReference"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.MessageApplicationReferenceSetEntityReferenceOfMessageApplication">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageApplicationReference"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.MessageApplicationSetMessageApplication">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageApplication"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.MessageAuditsGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageAudits"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.MessageAuditsSetEntityCollectionOfMessageAudit">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageAudits"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.MessageClientGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageClient"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.MessageClientIDGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageClientID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.MessageClientIDSetInt32">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageClientID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.MessageClientReferenceGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageClientReference"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.MessageClientReferenceSetEntityReferenceOfMessageClient">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageClientReference"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.MessageClientSetMessageClient">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageClient"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.MessageDateTimeGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageDateTime"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.MessageDateTimeSetDateTime">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageDateTime"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.MessageIDGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.MessageIDSetInt32">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.MessageNumberGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageNumber"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessage.AllInstances.MessageNumberSetString">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.Message.MessageNumber"/>
+            </summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication">
+            <summary>Mole type of <see cref="T:Vox.Auditing.Repository.SQLServer.DataModel.MessageApplication"/>
+            .</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.#ctor(Vox.Auditing.Repository.SQLServer.DataModel.MessageApplication)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.Bind(System.ComponentModel.INotifyPropertyChanged)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.Bind(System.ComponentModel.INotifyPropertyChanging)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.Bind(System.Data.Objects.DataClasses.IEntityWithChangeTracker)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.Bind(System.Data.Objects.DataClasses.IEntityWithKey)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.Bind(System.Data.Objects.DataClasses.IEntityWithRelationships)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.Constructor">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.DataModel.MessageApplication.#ctor"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.MessageApplicationGuidGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageApplication.MessageApplicationGuid"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.MessageApplicationGuidSetGuid">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageApplication.MessageApplicationGuid"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.MessageApplicationIDGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageApplication.MessageApplicationID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.MessageApplicationIDSetInt32">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageApplication.MessageApplicationID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.MessageApplicationNameGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageApplication.MessageApplicationName"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.MessageApplicationNameSetString">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageApplication.MessageApplicationName"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.MessagesGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageApplication.Messages"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.MessagesSetEntityCollectionOfMessage">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageApplication.Messages"/>
+            </summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.AllInstances.MessageApplicationGuidGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageApplication.MessageApplicationGuid"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.AllInstances.MessageApplicationGuidSetGuid">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageApplication.MessageApplicationGuid"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.AllInstances.MessageApplicationIDGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageApplication.MessageApplicationID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.AllInstances.MessageApplicationIDSetInt32">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageApplication.MessageApplicationID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.AllInstances.MessageApplicationNameGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageApplication.MessageApplicationName"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.AllInstances.MessageApplicationNameSetString">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageApplication.MessageApplicationName"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.AllInstances.MessagesGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageApplication.Messages"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageApplication.AllInstances.MessagesSetEntityCollectionOfMessage">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageApplication.Messages"/>
+            </summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit">
+            <summary>Mole type of <see cref="T:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit"/>
+            .</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.#ctor(Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.Bind(System.ComponentModel.INotifyPropertyChanged)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.Bind(System.ComponentModel.INotifyPropertyChanging)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.Bind(System.Data.Objects.DataClasses.IEntityWithChangeTracker)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.Bind(System.Data.Objects.DataClasses.IEntityWithKey)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.Bind(System.Data.Objects.DataClasses.IEntityWithRelationships)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.Constructor">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.#ctor"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.MessageAuditIDGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.MessageAuditID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.MessageAuditIDSetInt32">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.MessageAuditID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.MessageCorrelationIDGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.MessageCorrelationID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.MessageCorrelationIDSetString">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.MessageCorrelationID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.MessageDateTimeGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.MessageDateTime"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.MessageDateTimeSetDateTime">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.MessageDateTime"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.MessageGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.Message"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.MessageIDGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.MessageID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.MessageIDSetInt32">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.MessageID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.MessageReferenceGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.MessageReference"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.MessageReferenceSetEntityReferenceOfMessage">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.MessageReference"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.MessageSetMessage">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.Message"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.MessageStateGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.MessageState"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.MessageStateSetString">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.MessageState"/>
+            </summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.AllInstances.MessageAuditIDGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.MessageAuditID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.AllInstances.MessageAuditIDSetInt32">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.MessageAuditID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.AllInstances.MessageCorrelationIDGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.MessageCorrelationID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.AllInstances.MessageCorrelationIDSetString">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.MessageCorrelationID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.AllInstances.MessageDateTimeGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.MessageDateTime"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.AllInstances.MessageDateTimeSetDateTime">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.MessageDateTime"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.AllInstances.MessageGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.Message"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.AllInstances.MessageIDGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.MessageID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.AllInstances.MessageIDSetInt32">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.MessageID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.AllInstances.MessageReferenceGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.MessageReference"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.AllInstances.MessageReferenceSetEntityReferenceOfMessage">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.MessageReference"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.AllInstances.MessageSetMessage">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.Message"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.AllInstances.MessageStateGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.MessageState"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageAudit.AllInstances.MessageStateSetString">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit.MessageState"/>
+            </summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient">
+            <summary>Mole type of <see cref="T:Vox.Auditing.Repository.SQLServer.DataModel.MessageClient"/>
+            .</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.#ctor(Vox.Auditing.Repository.SQLServer.DataModel.MessageClient)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.Bind(System.ComponentModel.INotifyPropertyChanged)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.Bind(System.ComponentModel.INotifyPropertyChanging)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.Bind(System.Data.Objects.DataClasses.IEntityWithChangeTracker)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.Bind(System.Data.Objects.DataClasses.IEntityWithKey)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.Bind(System.Data.Objects.DataClasses.IEntityWithRelationships)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.BatchesGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageClient.Batches"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.BatchesSetEntityCollectionOfBatch">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageClient.Batches"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.Constructor">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.DataModel.MessageClient.#ctor"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.MessageClientIDGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageClient.MessageClientID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.MessageClientIDSetInt32">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageClient.MessageClientID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.MessageClientIdentifierGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageClient.MessageClientIdentifier"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.MessageClientIdentifierSetString">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageClient.MessageClientIdentifier"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.MessagesGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageClient.Messages"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.MessagesSetEntityCollectionOfMessage">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageClient.Messages"/>
+            </summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.AllInstances.BatchesGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageClient.Batches"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.AllInstances.BatchesSetEntityCollectionOfBatch">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageClient.Batches"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.AllInstances.MessageClientIDGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageClient.MessageClientID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.AllInstances.MessageClientIDSetInt32">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageClient.MessageClientID"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.AllInstances.MessageClientIdentifierGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageClient.MessageClientIdentifier"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.AllInstances.MessageClientIdentifierSetString">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageClient.MessageClientIdentifier"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.AllInstances.MessagesGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageClient.Messages"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MMessageClient.AllInstances.MessagesSetEntityCollectionOfMessage">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.MessageClient.Messages"/>
+            </summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel">
+            <summary>Mole type of <see cref="T:Vox.Auditing.Repository.SQLServer.MessageRepositoryDataModel"/>
+            .</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.#ctor(Vox.Auditing.Repository.SQLServer.MessageRepositoryDataModel)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.Bind(Vox.Auditing.Repository.IMessageRepository)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.Bind(Vox.Auditing.Repository.IRepository{Vox.Auditing.Model.Message})">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.AddMessage">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.MessageRepositoryDataModel.Add(Vox.Auditing.Model.Message)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.AddMessageToDictionaryMessage">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.MessageRepositoryDataModel.AddMessageToDictionary(Vox.Auditing.Model.Message)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.ConstructorString">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.MessageRepositoryDataModel.#ctor(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.GetByGuidGuid">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.MessageRepositoryDataModel.GetByGuid(System.Guid)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.GetByIDInt32">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.MessageRepositoryDataModel.GetByID(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.GetMessageApplicationIDGuid">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.MessageRepositoryDataModel.GetMessageApplicationID(System.Guid)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.RemoveMessage">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.MessageRepositoryDataModel.Remove(Vox.Auditing.Model.Message)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.UpdateMessage">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.MessageRepositoryDataModel.Update(Vox.Auditing.Model.Message)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.entity_AddMessageAuditMessageGuidString">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.MessageRepositoryDataModel.entity_AddMessageAudit(Vox.Auditing.Model.Message,System.Guid,System.String)"/>
+            </summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.AllInstances.AddMessage">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.MessageRepositoryDataModel.Add(Vox.Auditing.Model.Message)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.AllInstances.AddMessageToDictionaryMessage">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.MessageRepositoryDataModel.AddMessageToDictionary(Vox.Auditing.Model.Message)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.AllInstances.GetByGuidGuid">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.MessageRepositoryDataModel.GetByGuid(System.Guid)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.AllInstances.GetByIDInt32">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.MessageRepositoryDataModel.GetByID(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.AllInstances.GetMessageApplicationIDGuid">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.MessageRepositoryDataModel.GetMessageApplicationID(System.Guid)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.AllInstances.RemoveMessage">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.MessageRepositoryDataModel.Remove(Vox.Auditing.Model.Message)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.AllInstances.UpdateMessage">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.MessageRepositoryDataModel.Update(Vox.Auditing.Model.Message)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.MMessageRepositoryDataModel.AllInstances.entity_AddMessageAuditMessageGuidString">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.MessageRepositoryDataModel.entity_AddMessageAudit(Vox.Auditing.Model.Message,System.Guid,System.String)"/>
+            </summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MVoxAuditingEntities">
+            <summary>Mole type of <see cref="T:Vox.Auditing.Repository.SQLServer.DataModel.VoxAuditingEntities"/>
+            .</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MVoxAuditingEntities.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MVoxAuditingEntities.#ctor(Vox.Auditing.Repository.SQLServer.DataModel.VoxAuditingEntities)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MVoxAuditingEntities.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MVoxAuditingEntities.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MVoxAuditingEntities.Bind(Vox.Auditing.Repository.SQLServer.DataModel.IEntityContext)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MVoxAuditingEntities.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MVoxAuditingEntities.BatchesGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.VoxAuditingEntities.Batches"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MVoxAuditingEntities.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MVoxAuditingEntities.Constructor">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.DataModel.VoxAuditingEntities.#ctor"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MVoxAuditingEntities.ConstructorEntityConnection">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.DataModel.VoxAuditingEntities.#ctor(System.Data.EntityClient.EntityConnection)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MVoxAuditingEntities.ConstructorString">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.DataModel.VoxAuditingEntities.#ctor(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MVoxAuditingEntities.MessageApplicationsGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.VoxAuditingEntities.MessageApplications"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MVoxAuditingEntities.MessageAuditsGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.VoxAuditingEntities.MessageAudits"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MVoxAuditingEntities.MessageClientsGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.VoxAuditingEntities.MessageClients"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MVoxAuditingEntities.MessagesGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.VoxAuditingEntities.Messages"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MVoxAuditingEntities.SaveChanges">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.DataModel.VoxAuditingEntities.SaveChanges"/>
+            </summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MVoxAuditingEntities.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MVoxAuditingEntities.AllInstances.BatchesGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.VoxAuditingEntities.Batches"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MVoxAuditingEntities.AllInstances.MessageApplicationsGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.VoxAuditingEntities.MessageApplications"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MVoxAuditingEntities.AllInstances.MessageAuditsGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.VoxAuditingEntities.MessageAudits"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MVoxAuditingEntities.AllInstances.MessageClientsGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.VoxAuditingEntities.MessageClients"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MVoxAuditingEntities.AllInstances.MessagesGet">
+            <summary>Sets the mole of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.VoxAuditingEntities.Messages"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.MVoxAuditingEntities.AllInstances.SaveChanges">
+            <summary>Sets the mole of <see cref="M:Vox.Auditing.Repository.SQLServer.DataModel.VoxAuditingEntities.SaveChanges"/>
+            </summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SBatch">
+            <summary>Stub type of <see cref="T:Vox.Auditing.Repository.SQLServer.DataModel.Batch"/>
+            .</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SBatch.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SBatch.InitializeStub">
+            <summary>Initializes a new instance of type SBatch</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SBatch.OnPropertyChanged(System.String)">
+            <summary>Sets the stub of <see cref="M:System.Data.Objects.DataClasses.StructuralObject.OnPropertyChanged(System.String)"/>
+            </summary>
+        </member>
+        <member name="F:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SBatch.OnPropertyChangedString">
+            <summary>Sets the stub of <see cref="M:System.Data.Objects.DataClasses.StructuralObject.OnPropertyChanged(System.String)"/>
+            </summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SBatch.OnPropertyChanging(System.String)">
+            <summary>Sets the stub of <see cref="M:System.Data.Objects.DataClasses.StructuralObject.OnPropertyChanging(System.String)"/>
+            </summary>
+        </member>
+        <member name="F:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SBatch.OnPropertyChangingString">
+            <summary>Sets the stub of <see cref="M:System.Data.Objects.DataClasses.StructuralObject.OnPropertyChanging(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SBatch.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SBatch.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.Moles.SBatchRepositoryDataModel">
+            <summary>Stub type of <see cref="T:Vox.Auditing.Repository.SQLServer.BatchRepositoryDataModel"/>
+            .</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.Moles.SBatchRepositoryDataModel.#ctor(System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.Moles.SBatchRepositoryDataModel.InitializeStub">
+            <summary>Initializes a new instance of type SBatchRepositoryDataModel</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.SBatchRepositoryDataModel.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.SBatchRepositoryDataModel.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.Moles.SClientRepositoryDataModel">
+            <summary>Stub type of <see cref="T:Vox.Auditing.Repository.SQLServer.ClientRepositoryDataModel"/>
+            .</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.Moles.SClientRepositoryDataModel.#ctor(System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.Moles.SClientRepositoryDataModel.InitializeStub">
+            <summary>Initializes a new instance of type SClientRepositoryDataModel</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.SClientRepositoryDataModel.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.SClientRepositoryDataModel.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SIEntityContext">
+            <summary>Stub type of <see cref="T:Vox.Auditing.Repository.SQLServer.DataModel.IEntityContext"/>
+            .</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SIEntityContext.#ctor">
+            <summary>Initializes a new instance of type SIEntityContext</summary>
+        </member>
+        <member name="F:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SIEntityContext.BatchesGet">
+            <summary>Sets the stub of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.IEntityContext.Batches"/>
+            </summary>
+        </member>
+        <member name="F:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SIEntityContext.Dispose">
+            <summary>Sets the stub of <see cref="M:System.IDisposable.Dispose"/>
+            </summary>
+        </member>
+        <member name="F:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SIEntityContext.MessageApplicationsGet">
+            <summary>Sets the stub of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.IEntityContext.MessageApplications"/>
+            </summary>
+        </member>
+        <member name="F:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SIEntityContext.MessageAuditsGet">
+            <summary>Sets the stub of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.IEntityContext.MessageAudits"/>
+            </summary>
+        </member>
+        <member name="F:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SIEntityContext.MessageClientsGet">
+            <summary>Sets the stub of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.IEntityContext.MessageClients"/>
+            </summary>
+        </member>
+        <member name="F:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SIEntityContext.MessagesGet">
+            <summary>Sets the stub of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.IEntityContext.Messages"/>
+            </summary>
+        </member>
+        <member name="F:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SIEntityContext.SaveChanges">
+            <summary>Sets the stub of <see cref="M:Vox.Auditing.Repository.SQLServer.DataModel.IEntityContext.SaveChanges"/>
+            </summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SIEntityContext.global::System#IDisposable#Dispose">
+            <summary>Sets the stub of <see cref="M:System.IDisposable.Dispose"/>
+            </summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SIEntityContext.varsqls::Vox#Auditing#Repository#SQLServer#DataModel#IEntityContext#SaveChanges">
+            <summary>Sets the stub of <see cref="M:Vox.Auditing.Repository.SQLServer.DataModel.IEntityContext.SaveChanges"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SIEntityContext.varsqls::Vox#Auditing#Repository#SQLServer#DataModel#IEntityContext#Batches">
+            <summary>Sets the stub of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.IEntityContext.Batches"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SIEntityContext.varsqls::Vox#Auditing#Repository#SQLServer#DataModel#IEntityContext#MessageApplications">
+            <summary>Sets the stub of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.IEntityContext.MessageApplications"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SIEntityContext.varsqls::Vox#Auditing#Repository#SQLServer#DataModel#IEntityContext#MessageAudits">
+            <summary>Sets the stub of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.IEntityContext.MessageAudits"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SIEntityContext.varsqls::Vox#Auditing#Repository#SQLServer#DataModel#IEntityContext#MessageClients">
+            <summary>Sets the stub of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.IEntityContext.MessageClients"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SIEntityContext.varsqls::Vox#Auditing#Repository#SQLServer#DataModel#IEntityContext#Messages">
+            <summary>Sets the stub of <see cref="P:Vox.Auditing.Repository.SQLServer.DataModel.IEntityContext.Messages"/>
+            </summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SIValidate">
+            <summary>Stub type of <see cref="T:Vox.Auditing.Repository.SQLServer.DataModel.IValidate"/>
+            .</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SIValidate.#ctor">
+            <summary>Initializes a new instance of type SIValidate</summary>
+        </member>
+        <member name="F:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SIValidate.ValidateChangeAction">
+            <summary>Sets the stub of <see cref="M:Vox.Auditing.Repository.SQLServer.DataModel.IValidate.Validate(Vox.Auditing.Repository.SQLServer.DataModel.ChangeAction)"/>
+            </summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SIValidate.varsqls::Vox#Auditing#Repository#SQLServer#DataModel#IValidate#Validate(Vox.Auditing.Repository.SQLServer.DataModel.ChangeAction)">
+            <summary>Sets the stub of <see cref="M:Vox.Auditing.Repository.SQLServer.DataModel.IValidate.Validate(Vox.Auditing.Repository.SQLServer.DataModel.ChangeAction)"/>
+            </summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessage">
+            <summary>Stub type of <see cref="T:Vox.Auditing.Repository.SQLServer.DataModel.Message"/>
+            .</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessage.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessage.InitializeStub">
+            <summary>Initializes a new instance of type SMessage</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessage.OnPropertyChanged(System.String)">
+            <summary>Sets the stub of <see cref="M:System.Data.Objects.DataClasses.StructuralObject.OnPropertyChanged(System.String)"/>
+            </summary>
+        </member>
+        <member name="F:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessage.OnPropertyChangedString">
+            <summary>Sets the stub of <see cref="M:System.Data.Objects.DataClasses.StructuralObject.OnPropertyChanged(System.String)"/>
+            </summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessage.OnPropertyChanging(System.String)">
+            <summary>Sets the stub of <see cref="M:System.Data.Objects.DataClasses.StructuralObject.OnPropertyChanging(System.String)"/>
+            </summary>
+        </member>
+        <member name="F:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessage.OnPropertyChangingString">
+            <summary>Sets the stub of <see cref="M:System.Data.Objects.DataClasses.StructuralObject.OnPropertyChanging(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessage.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessage.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageApplication">
+            <summary>Stub type of <see cref="T:Vox.Auditing.Repository.SQLServer.DataModel.MessageApplication"/>
+            .</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageApplication.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageApplication.InitializeStub">
+            <summary>Initializes a new instance of type SMessageApplication</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageApplication.OnPropertyChanged(System.String)">
+            <summary>Sets the stub of <see cref="M:System.Data.Objects.DataClasses.StructuralObject.OnPropertyChanged(System.String)"/>
+            </summary>
+        </member>
+        <member name="F:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageApplication.OnPropertyChangedString">
+            <summary>Sets the stub of <see cref="M:System.Data.Objects.DataClasses.StructuralObject.OnPropertyChanged(System.String)"/>
+            </summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageApplication.OnPropertyChanging(System.String)">
+            <summary>Sets the stub of <see cref="M:System.Data.Objects.DataClasses.StructuralObject.OnPropertyChanging(System.String)"/>
+            </summary>
+        </member>
+        <member name="F:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageApplication.OnPropertyChangingString">
+            <summary>Sets the stub of <see cref="M:System.Data.Objects.DataClasses.StructuralObject.OnPropertyChanging(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageApplication.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageApplication.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageAudit">
+            <summary>Stub type of <see cref="T:Vox.Auditing.Repository.SQLServer.DataModel.MessageAudit"/>
+            .</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageAudit.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageAudit.InitializeStub">
+            <summary>Initializes a new instance of type SMessageAudit</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageAudit.OnPropertyChanged(System.String)">
+            <summary>Sets the stub of <see cref="M:System.Data.Objects.DataClasses.StructuralObject.OnPropertyChanged(System.String)"/>
+            </summary>
+        </member>
+        <member name="F:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageAudit.OnPropertyChangedString">
+            <summary>Sets the stub of <see cref="M:System.Data.Objects.DataClasses.StructuralObject.OnPropertyChanged(System.String)"/>
+            </summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageAudit.OnPropertyChanging(System.String)">
+            <summary>Sets the stub of <see cref="M:System.Data.Objects.DataClasses.StructuralObject.OnPropertyChanging(System.String)"/>
+            </summary>
+        </member>
+        <member name="F:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageAudit.OnPropertyChangingString">
+            <summary>Sets the stub of <see cref="M:System.Data.Objects.DataClasses.StructuralObject.OnPropertyChanging(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageAudit.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageAudit.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageClient">
+            <summary>Stub type of <see cref="T:Vox.Auditing.Repository.SQLServer.DataModel.MessageClient"/>
+            .</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageClient.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageClient.InitializeStub">
+            <summary>Initializes a new instance of type SMessageClient</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageClient.OnPropertyChanged(System.String)">
+            <summary>Sets the stub of <see cref="M:System.Data.Objects.DataClasses.StructuralObject.OnPropertyChanged(System.String)"/>
+            </summary>
+        </member>
+        <member name="F:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageClient.OnPropertyChangedString">
+            <summary>Sets the stub of <see cref="M:System.Data.Objects.DataClasses.StructuralObject.OnPropertyChanged(System.String)"/>
+            </summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageClient.OnPropertyChanging(System.String)">
+            <summary>Sets the stub of <see cref="M:System.Data.Objects.DataClasses.StructuralObject.OnPropertyChanging(System.String)"/>
+            </summary>
+        </member>
+        <member name="F:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageClient.OnPropertyChangingString">
+            <summary>Sets the stub of <see cref="M:System.Data.Objects.DataClasses.StructuralObject.OnPropertyChanging(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageClient.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SMessageClient.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.Moles.SMessageRepositoryDataModel">
+            <summary>Stub type of <see cref="T:Vox.Auditing.Repository.SQLServer.MessageRepositoryDataModel"/>
+            .</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.Moles.SMessageRepositoryDataModel.#ctor(System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.Moles.SMessageRepositoryDataModel.InitializeStub">
+            <summary>Initializes a new instance of type SMessageRepositoryDataModel</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.SMessageRepositoryDataModel.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.Moles.SMessageRepositoryDataModel.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SVoxAuditingEntities">
+            <summary>Stub type of <see cref="T:Vox.Auditing.Repository.SQLServer.DataModel.VoxAuditingEntities"/>
+            .</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SVoxAuditingEntities.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SVoxAuditingEntities.#ctor(System.Data.EntityClient.EntityConnection)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SVoxAuditingEntities.#ctor(System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SVoxAuditingEntities.InitializeStub">
+            <summary>Initializes a new instance of type SVoxAuditingEntities</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SVoxAuditingEntities.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Vox.Auditing.Repository.SQLServer.DataModel.Moles.SVoxAuditingEntities.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+    </members>
+</doc>
