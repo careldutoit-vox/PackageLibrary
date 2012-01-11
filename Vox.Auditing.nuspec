@@ -11,4 +11,7 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>$description$</description>
     </metadata>
+    <files>
+        <file src="*.config" target="lib" />
+    </files>
 </package>
