@@ -11,7 +11,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("This is For auditing perposes")]
 [assembly: AssemblyCompany("Vox")]
 [assembly: AssemblyProduct("Vox.Auditing")]
-
+[assembly: AssemblyCopyright("Copyright ©  2012")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
 // Version information for an assembly consists of the following four values:
 //
 //      Major Version
