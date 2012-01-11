@@ -3,8 +3,8 @@
     <metadata>
         <id>Vox.Auditing</id>
         <version>$version$</version>
-        <authors>$author$</authors>
-        <owners>$author$</owners>
+        <authors>Carel the Cool</authors>
+        <owners>Carel the Awesome</owners>
         <iconUrl>
             http://wiki.voxtelecom.co.za:8080/display/Dev/NuGet+and+TeamCity
         </iconUrl>
