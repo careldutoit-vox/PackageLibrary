@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F19B9040-90FE-4BD0-BBF0-AA11713082AC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vox.Auditing.Tests</RootNamespace>
+    <AssemblyName>Vox.Auditing.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Moles.Framework, Version=0.94.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="T2.SendingMessage.Library">
+      <HintPath>..\..\..\N-Libaries\dll-library\T2Dependencies\T2.SendingMessage.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="T2.SendingMessage.Library.Moles, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="T2.Vox.RouteKey.Plugins.Interface">
+      <HintPath>..\..\..\N-Libaries\dll-library\T2Dependencies\T2.Vox.RouteKey.Plugins.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Vox.Auditing.Moles, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Vox.Auditing.Repository.SQLServer.Moles, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AuditingPluginTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vox.Auditing.Model\Vox.Auditing.Model.csproj">
+      <Project>{3383BFAF-B39A-4C72-B26F-57E7EDFC38D4}</Project>
+      <Name>Vox.Auditing.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vox.Auditing.Repository.SQLServer\Vox.Auditing.Repository.SQLServer.csproj">
+      <Project>{7A908ACD-5D99-43B9-A9BB-CF5AFB8FA37E}</Project>
+      <Name>Vox.Auditing.Repository.SQLServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vox.Auditing.Repository\Vox.Auditing.Repository.csproj">
+      <Project>{08E09F4B-9DA4-4F87-BF68-D95C4B481845}</Project>
+      <Name>Vox.Auditing.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vox.Auditing\Vox.Auditing.csproj">
+      <Project>{9DA8E621-BAF2-4C53-87D0-F50A995F4FB5}</Project>
+      <Name>Vox.Auditing</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Moles Include="Vox.Auditing.Repository.SQLServer.moles" />
+  </ItemGroup>
+  <ItemGroup>
+    <Moles Include="T2.SendingMessage.Library.moles" />
+  </ItemGroup>
+  <ItemGroup>
+    <Moles Include="Vox.Auditing.moles" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

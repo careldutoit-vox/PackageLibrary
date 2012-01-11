@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<project name="Vox.Auditing" default="run" basedir="." xmlns="http://nant.sf.net/schemas/nant.xsd">
+    <property name="version" value="${build.number}"/>
+    <!--default the commandline property to false if no input was given-->
+    <property name="commandline" value="false" unless="${property::exists('commandline')}" />    
+    <property name="base.dir" value="..\\Vox.Auditing"/>
+    <property name="deploy.dir" value="Artifact"/>
+    <property name="zipfile" value="DeploymentVersion${version}.zip"/>
+    <property name="projectfile" value="Vox.Auditing.sln"/>
+    <!-- builds the entire solution -->
+    <target name="build" description="Compile the project using Release configuration">        
+        <echo message="Building.........................................."/>
+        <!--NOTE:
+        in order to run the Nant build file directly from command line, set the property commandline = true (this will not use the "tools-version" property)
+            "nant -D:version=0 -D:commandline=true"			
+        in order for TeamCity to use the Nant build file to compile .net 4.0, do not set the property commandline (this will not use the "tools-version" property)
+            "nant -D:version=0"
+        -->
+        <choose>
+            <!-- commandline == true-->
+            <when test="${commandline}">
+                <msbuild verbose="true" verbosity="Detailed" failonerror="true" project="${projectfile}">
+                    <property name="Configuration" value="Release"/>
+                </msbuild>
+            </when>
+            <!-- commandline == false-->
+            <otherwise>
+                <msbuild verbose="true" verbosity="Detailed" failonerror="true" project="${projectfile}" tools-version="4.0">
+                    <property name="Configuration" value="Release"/>
+                </msbuild>
+            </otherwise>
+        </choose>
+        <!-- Call the unit tests for the build -->
+        <!-- <property name="teamcity.dotnet.nant.nunit2.platform" value="x86"/>
+        <nunit2>
+            <formatter type="Plain" />
+            <test assemblyname="${base.dir}\Vox.Porta.Model.Tests\bin\Release\Vox.Porta.Model.Tests.dll" />
+            <test assemblyname="${base.dir}\Vox.VoiceProvisioning.Porta.Repository.Tests\bin\Release\Vox.Porta.Repository.Tests.dll" />
+            <test assemblyname="${base.dir}\Vox.Porta.Tests\bin\Release\Vox.Porta.Tests.dll" />
+            <test assemblyname="${base.dir}\Vox.Porta.Approval.Tests\bin\Release\Vox.Porta.Approval.Tests.dll" /> 
+        </nunit2> -->
+        <exec program="MSTest.exe"
+          commandline="/testcontainer:Vox.Auditing.Repository.SQLServer.Tests\bin\Release\Vox.Auditing.Repository.SQLServer.Tests.dll /testcontainer:Vox.Auditing.Tests\bin\Release\Vox.Auditing.Tests.dll /runconfig:local.testsettings"
+          basedir="C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE"
+          failonerror="false"/>
+        <echo message="##teamcity[importData id='mstest' file='N-Services\Vox.Auditing\TestResults\Vox.Auditing.Tests.trx']" />
+    </target>
+    <!-- packages the project [zip file] -->
+    <target name="package" depends="build" description="Package production files">
+        <echo message="Packaging.........................................."/>
+        <mkdir dir="${deploy.dir}"/>
+        <zip zipfile="${deploy.dir}\${zipfile}">
+            <fileset basedir="${base.dir}" prefix="">
+                <!--Include the following directories-->
+                <include name="**/Vox.Auditing/**"/>
+                <!--Exclude the following-->
+                <exclude name="**/Vox.Auditing.Tests/**"/>
+                <exclude name="**/Vox.Auditing.Model/**"/>
+                <exclude name="**/Vox.Auditing.Repository/**"/>
+                <exclude name="**/Vox.Auditing.Repository.SQLServer/**"/>
+                <exclude name="**/Vox.Auditing.Repository.SQLServer.Tests/**"/>
+                <exclude name="**.cs"/>
+                <exclude name="**.resx"/>
+                <exclude name="**.csproj*"/>
+                <exclude name="**.pdb"/>
+                <exclude name="**.git"/>
+                <exclude name="**.sln"/>
+                <exclude name="**.suo"/>
+                <exclude name="**.Publish.xml"/>
+                <exclude name="**.csproj.user"/>
+                <exclude name="**.build"/>
+                <exclude name="**.cache"/>
+                <exclude name="**.application"/>
+                <exclude name="**.manifest"/>
+                <exclude name="**/obj/**"/>
+                <exclude name="**/.git"/>
+                <exclude name="**.gitignore"/>
+                <exclude name="**.gitmodules"/>
+            </fileset>
+        </zip>
+    </target>
+    <!-- default target -->
+    <target name="run" depends="build, package" description="build and package"/>
+</project>

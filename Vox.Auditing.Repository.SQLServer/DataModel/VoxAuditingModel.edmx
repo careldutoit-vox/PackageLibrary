@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="VoxAuditingModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="VoxAuditingModelStoreContainer">
+          <EntitySet Name="Batch" EntityType="VoxAuditingModel.Store.Batch" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Message" EntityType="VoxAuditingModel.Store.Message" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MessageApplication" EntityType="VoxAuditingModel.Store.MessageApplication" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MessageAudit" EntityType="VoxAuditingModel.Store.MessageAudit" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MessageClient" EntityType="VoxAuditingModel.Store.MessageClient" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Batch_MessageClient" Association="VoxAuditingModel.Store.FK_Batch_MessageClient">
+            <End Role="MessageClient" EntitySet="MessageClient" />
+            <End Role="Batch" EntitySet="Batch" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_Batch" Association="VoxAuditingModel.Store.FK_Message_Batch">
+            <End Role="Batch" EntitySet="Batch" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_MessageApplication" Association="VoxAuditingModel.Store.FK_Message_MessageApplication">
+            <End Role="MessageApplication" EntitySet="MessageApplication" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_MessageClient" Association="VoxAuditingModel.Store.FK_Message_MessageClient">
+            <End Role="MessageClient" EntitySet="MessageClient" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MessageAudit_Message" Association="VoxAuditingModel.Store.FK_MessageAudit_Message">
+            <End Role="Message" EntitySet="Message" />
+            <End Role="MessageAudit" EntitySet="MessageAudit" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Batch">
+          <Key>
+            <PropertyRef Name="BatchID" />
+          </Key>
+          <Property Name="BatchID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BatchNumber" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="StartDate" Type="datetime" Nullable="false" />
+          <Property Name="FinishDate" Type="datetime" />
+          <Property Name="MessageClientID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Message">
+          <Key>
+            <PropertyRef Name="MessageID" />
+          </Key>
+          <Property Name="MessageID" Type="int" Nullable="false" />
+          <Property Name="MessageNumber" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="MessageDateTime" Type="datetime" Nullable="false" />
+          <Property Name="MessageApplicationID" Type="int" Nullable="false" />
+          <Property Name="MessageClientID" Type="int" Nullable="false" />
+          <Property Name="BatchID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="MessageApplication">
+          <Key>
+            <PropertyRef Name="MessageApplicationID" />
+          </Key>
+          <Property Name="MessageApplicationID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MessageApplicationGuid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="MessageApplicationName" Type="varchar" Nullable="false" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="MessageAudit">
+          <Key>
+            <PropertyRef Name="MessageAuditID" />
+          </Key>
+          <Property Name="MessageAuditID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MessageID" Type="int" Nullable="false" />
+          <Property Name="MessageCorrelationID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="MessageDateTime" Type="datetime" Nullable="false" />
+          <Property Name="MessageState" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MessageClient">
+          <Key>
+            <PropertyRef Name="MessageClientID" />
+          </Key>
+          <Property Name="MessageClientID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MessageClientIdentifier" Type="varchar" Nullable="false" MaxLength="150" />
+        </EntityType>
+        <Association Name="FK_Batch_MessageClient">
+          <End Role="MessageClient" Type="VoxAuditingModel.Store.MessageClient" Multiplicity="1" />
+          <End Role="Batch" Type="VoxAuditingModel.Store.Batch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MessageClient">
+              <PropertyRef Name="MessageClientID" />
+            </Principal>
+            <Dependent Role="Batch">
+              <PropertyRef Name="MessageClientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Message_Batch">
+          <End Role="Batch" Type="VoxAuditingModel.Store.Batch" Multiplicity="1" />
+          <End Role="Message" Type="VoxAuditingModel.Store.Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Batch">
+              <PropertyRef Name="BatchID" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="BatchID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Message_MessageApplication">
+          <End Role="MessageApplication" Type="VoxAuditingModel.Store.MessageApplication" Multiplicity="1" />
+          <End Role="Message" Type="VoxAuditingModel.Store.Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MessageApplication">
+              <PropertyRef Name="MessageApplicationID" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="MessageApplicationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Message_MessageClient">
+          <End Role="MessageClient" Type="VoxAuditingModel.Store.MessageClient" Multiplicity="1" />
+          <End Role="Message" Type="VoxAuditingModel.Store.Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MessageClient">
+              <PropertyRef Name="MessageClientID" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="MessageClientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MessageAudit_Message">
+          <End Role="Message" Type="VoxAuditingModel.Store.Message" Multiplicity="1" />
+          <End Role="MessageAudit" Type="VoxAuditingModel.Store.MessageAudit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Message">
+              <PropertyRef Name="MessageID" />
+            </Principal>
+            <Dependent Role="MessageAudit">
+              <PropertyRef Name="MessageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VoxAuditingModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="VoxAuditingEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Batches" EntityType="VoxAuditingModel.Batch" />
+          <EntitySet Name="Messages" EntityType="VoxAuditingModel.Message" />
+          <EntitySet Name="MessageApplications" EntityType="VoxAuditingModel.MessageApplication" />
+          <EntitySet Name="MessageAudits" EntityType="VoxAuditingModel.MessageAudit" />
+          <EntitySet Name="MessageClients" EntityType="VoxAuditingModel.MessageClient" />
+          <AssociationSet Name="FK_Batch_MessageClient" Association="VoxAuditingModel.FK_Batch_MessageClient">
+            <End Role="MessageClient" EntitySet="MessageClients" />
+            <End Role="Batch" EntitySet="Batches" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_Batch" Association="VoxAuditingModel.FK_Message_Batch">
+            <End Role="Batch" EntitySet="Batches" />
+            <End Role="Message" EntitySet="Messages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_MessageApplication" Association="VoxAuditingModel.FK_Message_MessageApplication">
+            <End Role="MessageApplication" EntitySet="MessageApplications" />
+            <End Role="Message" EntitySet="Messages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_MessageClient" Association="VoxAuditingModel.FK_Message_MessageClient">
+            <End Role="MessageClient" EntitySet="MessageClients" />
+            <End Role="Message" EntitySet="Messages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MessageAudit_Message" Association="VoxAuditingModel.FK_MessageAudit_Message">
+            <End Role="Message" EntitySet="Messages" />
+            <End Role="MessageAudit" EntitySet="MessageAudits" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Batch">
+          <Key>
+            <PropertyRef Name="BatchID" />
+          </Key>
+          <Property Type="Int32" Name="BatchID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="BatchNumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="StartDate" Nullable="false" />
+          <Property Type="DateTime" Name="FinishDate" />
+          <Property Type="Int32" Name="MessageClientID" Nullable="false" />
+          <NavigationProperty Name="MessageClient" Relationship="VoxAuditingModel.FK_Batch_MessageClient" FromRole="Batch" ToRole="MessageClient" />
+          <NavigationProperty Name="Messages" Relationship="VoxAuditingModel.FK_Message_Batch" FromRole="Batch" ToRole="Message" />
+        </EntityType>
+        <EntityType Name="Message">
+          <Key>
+            <PropertyRef Name="MessageID" />
+          </Key>
+          <Property Type="Int32" Name="MessageID" Nullable="false" />
+          <Property Type="String" Name="MessageNumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="MessageDateTime" Nullable="false" />
+          <Property Type="Int32" Name="MessageApplicationID" Nullable="false" />
+          <Property Type="Int32" Name="MessageClientID" Nullable="false" />
+          <Property Type="Int32" Name="BatchID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Batch" Relationship="VoxAuditingModel.FK_Message_Batch" FromRole="Message" ToRole="Batch" />
+          <NavigationProperty Name="MessageApplication" Relationship="VoxAuditingModel.FK_Message_MessageApplication" FromRole="Message" ToRole="MessageApplication" />
+          <NavigationProperty Name="MessageClient" Relationship="VoxAuditingModel.FK_Message_MessageClient" FromRole="Message" ToRole="MessageClient" />
+          <NavigationProperty Name="MessageAudits" Relationship="VoxAuditingModel.FK_MessageAudit_Message" FromRole="Message" ToRole="MessageAudit" />
+        </EntityType>
+        <EntityType Name="MessageApplication">
+          <Key>
+            <PropertyRef Name="MessageApplicationID" />
+          </Key>
+          <Property Type="Int32" Name="MessageApplicationID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="MessageApplicationGuid" Nullable="false" />
+          <Property Type="String" Name="MessageApplicationName" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Messages" Relationship="VoxAuditingModel.FK_Message_MessageApplication" FromRole="MessageApplication" ToRole="Message" />
+        </EntityType>
+        <EntityType Name="MessageAudit">
+          <Key>
+            <PropertyRef Name="MessageAuditID" />
+          </Key>
+          <Property Type="Int32" Name="MessageAuditID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="MessageID" Nullable="false" />
+          <Property Type="String" Name="MessageCorrelationID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="MessageDateTime" Nullable="false" />
+          <Property Type="String" Name="MessageState" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Message" Relationship="VoxAuditingModel.FK_MessageAudit_Message" FromRole="MessageAudit" ToRole="Message" />
+        </EntityType>
+        <EntityType Name="MessageClient">
+          <Key>
+            <PropertyRef Name="MessageClientID" />
+          </Key>
+          <Property Type="Int32" Name="MessageClientID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="MessageClientIdentifier" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Batches" Relationship="VoxAuditingModel.FK_Batch_MessageClient" FromRole="MessageClient" ToRole="Batch" />
+          <NavigationProperty Name="Messages" Relationship="VoxAuditingModel.FK_Message_MessageClient" FromRole="MessageClient" ToRole="Message" />
+        </EntityType>
+        <Association Name="FK_Batch_MessageClient">
+          <End Type="VoxAuditingModel.MessageClient" Role="MessageClient" Multiplicity="1" />
+          <End Type="VoxAuditingModel.Batch" Role="Batch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MessageClient">
+              <PropertyRef Name="MessageClientID" />
+            </Principal>
+            <Dependent Role="Batch">
+              <PropertyRef Name="MessageClientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Message_Batch">
+          <End Type="VoxAuditingModel.Batch" Role="Batch" Multiplicity="1" />
+          <End Type="VoxAuditingModel.Message" Role="Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Batch">
+              <PropertyRef Name="BatchID" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="BatchID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Message_MessageApplication">
+          <End Type="VoxAuditingModel.MessageApplication" Role="MessageApplication" Multiplicity="1" />
+          <End Type="VoxAuditingModel.Message" Role="Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MessageApplication">
+              <PropertyRef Name="MessageApplicationID" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="MessageApplicationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Message_MessageClient">
+          <End Type="VoxAuditingModel.MessageClient" Role="MessageClient" Multiplicity="1" />
+          <End Type="VoxAuditingModel.Message" Role="Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MessageClient">
+              <PropertyRef Name="MessageClientID" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="MessageClientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MessageAudit_Message">
+          <End Type="VoxAuditingModel.Message" Role="Message" Multiplicity="1" />
+          <End Type="VoxAuditingModel.MessageAudit" Role="MessageAudit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Message">
+              <PropertyRef Name="MessageID" />
+            </Principal>
+            <Dependent Role="MessageAudit">
+              <PropertyRef Name="MessageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VoxAuditingModelStoreContainer" CdmEntityContainer="VoxAuditingEntities">
+          <EntitySetMapping Name="Batches">
+            <EntityTypeMapping TypeName="VoxAuditingModel.Batch">
+              <MappingFragment StoreEntitySet="Batch">
+                <ScalarProperty Name="MessageClientID" ColumnName="MessageClientID" />
+                <ScalarProperty Name="FinishDate" ColumnName="FinishDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="BatchNumber" ColumnName="BatchNumber" />
+                <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Messages">
+            <EntityTypeMapping TypeName="VoxAuditingModel.Message">
+              <MappingFragment StoreEntitySet="Message">
+                <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+                <ScalarProperty Name="MessageClientID" ColumnName="MessageClientID" />
+                <ScalarProperty Name="MessageApplicationID" ColumnName="MessageApplicationID" />
+                <ScalarProperty Name="MessageDateTime" ColumnName="MessageDateTime" />
+                <ScalarProperty Name="MessageNumber" ColumnName="MessageNumber" />
+                <ScalarProperty Name="MessageID" ColumnName="MessageID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MessageApplications">
+            <EntityTypeMapping TypeName="VoxAuditingModel.MessageApplication">
+              <MappingFragment StoreEntitySet="MessageApplication">
+                <ScalarProperty Name="MessageApplicationName" ColumnName="MessageApplicationName" />
+                <ScalarProperty Name="MessageApplicationGuid" ColumnName="MessageApplicationGuid" />
+                <ScalarProperty Name="MessageApplicationID" ColumnName="MessageApplicationID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MessageAudits">
+            <EntityTypeMapping TypeName="VoxAuditingModel.MessageAudit">
+              <MappingFragment StoreEntitySet="MessageAudit">
+                <ScalarProperty Name="MessageState" ColumnName="MessageState" />
+                <ScalarProperty Name="MessageDateTime" ColumnName="MessageDateTime" />
+                <ScalarProperty Name="MessageCorrelationID" ColumnName="MessageCorrelationID" />
+                <ScalarProperty Name="MessageID" ColumnName="MessageID" />
+                <ScalarProperty Name="MessageAuditID" ColumnName="MessageAuditID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MessageClients">
+            <EntityTypeMapping TypeName="VoxAuditingModel.MessageClient">
+              <MappingFragment StoreEntitySet="MessageClient">
+                <ScalarProperty Name="MessageClientIdentifier" ColumnName="MessageClientIdentifier" />
+                <ScalarProperty Name="MessageClientID" ColumnName="MessageClientID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="VoxAuditingModel">
+        <EntityTypeShape EntityType="VoxAuditingModel.Batch" Width="1.5" PointX="3" PointY="1.25" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="VoxAuditingModel.Message" Width="1.5" PointX="5.25" PointY="1" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="VoxAuditingModel.MessageApplication" Width="1.5" PointX="3" PointY="5.5" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="VoxAuditingModel.MessageAudit" Width="1.5" PointX="7.5" PointY="1.375" Height="2.1725878906250031" />
+        <EntityTypeShape EntityType="VoxAuditingModel.MessageClient" Width="1.5" PointX="0.75" PointY="1.5" Height="1.7879850260416674" />
+        <AssociationConnector Association="VoxAuditingModel.FK_Batch_MessageClient" >
+          <ConnectorPoint PointX="2.25" PointY="2.3939925130208337" />
+          <ConnectorPoint PointX="3" PointY="2.3939925130208337" />
+        </AssociationConnector>
+        <AssociationConnector Association="VoxAuditingModel.FK_Message_Batch" >
+          <ConnectorPoint PointX="4.5" PointY="2.4324446614583337" />
+          <ConnectorPoint PointX="5.25" PointY="2.4324446614583337" />
+        </AssociationConnector>
+        <AssociationConnector Association="VoxAuditingModel.FK_Message_MessageApplication" >
+          <ConnectorPoint PointX="4.5" PointY="6.3939925130208337" />
+          <ConnectorPoint PointX="6" PointY="6.3939925130208337" />
+          <ConnectorPoint PointX="6" PointY="3.9417936197916674" />
+        </AssociationConnector>
+        <AssociationConnector Association="VoxAuditingModel.FK_Message_MessageClient" >
+          <ConnectorPoint PointX="1.5" PointY="3.2879850260416674" />
+          <ConnectorPoint PointX="1.5" PointY="3.8095914713541674" />
+          <ConnectorPoint PointX="5.25" PointY="3.8095914713541674" />
+        </AssociationConnector>
+        <AssociationConnector Association="VoxAuditingModel.FK_MessageAudit_Message" >
+          <ConnectorPoint PointX="6.75" PointY="2.4612939453125016" />
+          <ConnectorPoint PointX="7.5" PointY="2.4612939453125016" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
