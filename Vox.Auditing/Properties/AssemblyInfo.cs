@@ -7,20 +7,8 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 [assembly: AssemblyTitle("Vox.Auditing")]
 [assembly: AssemblyDescription("This is For auditing perposes")]
-[assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Vox")]
 [assembly: AssemblyProduct("Vox.Auditing")]
-
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-
-// Setting ComVisible to false makes the types in this assembly not visible 
-// to COM components.  If you need to access a type in this assembly from 
-// COM, set the ComVisible attribute to true on that type.
-[assembly: ComVisible(false)]
-
-// The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("5e919051-3545-44ea-8cd9-ddfe02a35927")]
 
 // Version information for an assembly consists of the following four values:
 //
