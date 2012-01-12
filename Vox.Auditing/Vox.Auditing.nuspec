@@ -1,24 +1,17 @@
 ﻿<?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
-        <id>Vox.Auditing</id>
+        <id>$id$</id>
         <version>$version$</version>
-        <authors>Carel the Cool</authors>
-        <owners>Carel the Awesome</owners>
+        <authors>$author$</authors>
+        <owners>$author$</owners>
         <iconUrl>
             http://wiki.voxtelecom.co.za:8080/display/Dev/NuGet+and+TeamCity
         </iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Because this is fucked up</description>
-        <dependencies>
-            <dependency id="another-package" version="3.0.0" />
-            <dependency id="yet-another-package"/>
-        </dependencies>
+        <description>$Description$</description>
     </metadata>
     <files>
-        <file src="bin\Debug\*.dll" target="lib" />
-        <file src="bin\Debug\*.pdb" target="lib" />
-        <file src="tools\**\*.*" exclude="**\*.log" />
-        <file src="*.config" target="lib" />
+        <file src="*.config" target="content" />
     </files>
 </package>
