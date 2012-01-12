@@ -12,6 +12,6 @@
         <description>$Description$</description>
     </metadata>
     <files>
-        <file src="*.config" target="tools" />
+        <file src="*.config" target="content" />
     </files>
 </package>
