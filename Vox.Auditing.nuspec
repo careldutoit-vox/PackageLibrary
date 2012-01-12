@@ -10,13 +10,10 @@
         </iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Because this is fucked up</description>
-        <dependencies>
-            <dependency id="another-package" version="3.0.0" />
-        </dependencies>
     </metadata>
     <files>
-        <file src="bin\Debug\*.dll" target="lib" />
-        <file src="bin\Debug\*.pdb" target="lib" />
+        <file src="bin\Release\*.dll" target="lib" />
+        <file src="bin\Release\*.pdb" target="lib" />
         <file src="tools\**\*.*" exclude="**\*.log" />
         <file src="*.config" target="lib" />
     </files>
