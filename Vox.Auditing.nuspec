@@ -11,5 +11,7 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Because this is fucked up</description>
     </metadata>
-  
+    <files>
+        <file src="*.config" target="tools" />
+    </files>
 </package>
