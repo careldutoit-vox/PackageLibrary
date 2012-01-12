@@ -66,6 +66,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config.transform" />
     <None Include="Vox.Auditing.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

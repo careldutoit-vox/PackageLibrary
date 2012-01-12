@@ -13,5 +13,6 @@
     </metadata>
     <files>
         <file src="*.config" target="content" />
+        <file src="*.config.transform" target="content" />
     </files>
 </package>
