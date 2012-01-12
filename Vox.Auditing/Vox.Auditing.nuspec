@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
-        <id>Vox.Auditing</id>
+        <id>$id$</id>
         <version>$version$</version>
         <authors>Carel the Cool</authors>
         <owners>Carel the Awesome</owners>
@@ -9,9 +9,9 @@
             http://wiki.voxtelecom.co.za:8080/display/Dev/NuGet+and+TeamCity
         </iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Because this is fucked up</description>
+        <description>$Description$</description>
     </metadata>
     <files>
-        <file src="*.config" target="lib" />
+        <file src="*.config" target="tools" />
     </files>
 </package>
