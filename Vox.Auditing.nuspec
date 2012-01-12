@@ -9,11 +9,11 @@
             http://wiki.voxtelecom.co.za:8080/display/Dev/NuGet+and+TeamCity
         </iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>$description$</description>
+        <description>$Description$</description>
     </metadata>
     <files>
-        <file src="bin\Debug\*.dll" target="lib" />
-        <file src="bin\Release\*.pdb" target="lib" />
+        <file src="bin\Release\*.dll" target="tools" />
+        <file src="bin\Release\*.pdb" target="tools" />
         <file src="bin\Release\*.config" target="tools" />
     </files>
 </package>
