@@ -12,7 +12,6 @@
         <description>Because this is fucked up</description>
         <dependencies>
             <dependency id="another-package" version="3.0.0" />
-            <dependency id="yet-another-package"/>
         </dependencies>
     </metadata>
     <files>
