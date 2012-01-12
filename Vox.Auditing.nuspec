@@ -12,6 +12,8 @@
         <description>Because this is fucked up</description>
     </metadata>
     <files>
-        <file src="*.config" target="tools" />
+        <file src="bin\Release\*.dll" target="lib" />
+        <file src="bin\Release\*.pdb" target="lib" />
+        <file src="bin\Release\*.config" target="tools" />
     </files>
 </package>
